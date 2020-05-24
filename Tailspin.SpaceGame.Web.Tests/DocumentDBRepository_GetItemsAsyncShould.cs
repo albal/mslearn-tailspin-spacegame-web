@@ -18,6 +18,7 @@ namespace Tests
         {
             using (Stream scoresData = typeof(IDocumentDBRepository<Score>)
                 .Assembly
+
                 .GetManifestResourceStream("Tailspin.SpaceGame.Web.SampleData.scores.json"))
             {
                 _scoreRepository = new LocalDocumentDBRepository<Score>(scoresData);
